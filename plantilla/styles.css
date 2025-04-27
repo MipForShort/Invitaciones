@@ -42,7 +42,7 @@ body {
 .invitacion p {
   font-family: 'Montserrat';
   font-size: 1.5rem;
-  margin-bottom: 1rems;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 480px) {
