@@ -6,6 +6,7 @@
   <title>Invitación</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
@@ -15,28 +16,85 @@
     </header>
 
     <main class="contenido">
-      <p>Te invitamos a celebrar con nosotros...</p>
+      <p><i>Te invitamos a celebrar con nosotros...</i></p>
+      <h2><strong>Nuestra boda</strong></h2>
       <p><strong>Fecha:</strong> 15 de mayo de 2025</p>
       <p><strong>Lugar:</strong> Salón Las Estrellas</p>
+      <section>
+        <h2>Ubicación</h2>
+      </section>
       <div class="mapa">
-        <section>
-          <h2>Ubicación</h2>
-        </section>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6770.873142014656!2d-99.53076568881067!3d24.859538728407717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x867c93fcbb67e57d%3A0xe3c3b2e56065420f!2sQuinta%20Cielito%20Lindoquinta%20Cielito%20lindo!5e0!3m2!1ses!2smx!4v1745475507535!5m2!1ses!2smx" width="90%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6770.873142014656!2d-99.53076568881067!3d24.859538728407717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x867c93fcbb67e57d%3A0xe3c3b2e56065420f!2sQuinta%20Cielito%20Lindoquinta%20Cielito%20lindo!5e0!3m2!1ses!2smx!4v1745475507535!5m2!1ses!2smx" height="300" style="border-radius: 2%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-        <a href="https://maps.app.goo.gl/v1sfa4VU2ciWCVqK8" target="_blank" class="boton-direccion">
-          ¿Cómo llegar?
-        </a>
+      <a href="https://maps.app.goo.gl/v1sfa4VU2ciWCVqK8" target="_blank" class="boton-direccion">
+        ¿Cómo llegar?
+      </a>
+      <div>
+        <section class="cuenta-regresiva">
+          <h2>Cuenta regresiva</h2>
+          <div id="contador" class="contador-grid">
+            <div class="tiempo">
+              <span id="dias">00</span>
+              <small>Días</small>
+            </div>
+            <div class="tiempo">
+              <span id="horas">00</span>
+              <small>Horas</small>
+            </div>
+            <div class="tiempo">
+              <span id="minutos">00</span>
+              <small>Minutos</small>
+            </div>
+            <div class="tiempo">
+              <span id="segundos">00</span>
+              <small>Segundos</small>
+            </div>
+          </div>
+        </section>
+        <script>
+          const fechaEvento = new Date('2025-05-15T00:00:00').getTime();
+
+          const diasEl = document.getElementById('dias');
+          const horasEl = document.getElementById('horas');
+          const minutosEl = document.getElementById('minutos');
+          const segundosEl = document.getElementById('segundos');
+
+          const actualizarContador = () => {
+            const ahora = new Date().getTime();
+            const diferencia = fechaEvento - ahora;
+
+            if (diferencia <= 0) {
+              document.getElementById('contador').innerHTML = "¡Hoy es el gran día!";
+              clearInterval(intervalo);
+              return;
+            }
+
+            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+            diasEl.innerText = String(dias).padStart(2, '0');
+            horasEl.innerText = String(horas).padStart(2, '0');
+            minutosEl.innerText = String(minutos).padStart(2, '0');
+            segundosEl.innerText = String(segundos).padStart(2, '0');
+          };
+
+          const intervalo = setInterval(actualizarContador, 1000);
+          actualizarContador();
+
+        </script>
+      </div>
     </main>
     <section class="clima">
       <h2>Clima en Linares</h2>
-      <a class="weatherwidget-io" href="https://forecast7.com/es/24d86n99d56/linares/" data-label_1="LINARES" data-label_2="WEATHER" data-theme="original" >LINARES WEATHER</a>
+      <a class="weatherwidget-io" href="https://forecast7.com/en/24d86n99d56/linares/" data-label_1="LINARES" data-label_2="WEATHER" data-days="3" data-theme="metallic" >LINARES WEATHER</a>
       <script>
-	      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-	    </script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+      </script>
 	  </section>
     <footer class="pie">
-      <p>RSVP al 123-456-7890</p>
+      <p>RSVP al <strong>123-456-7890</strong></p>
     </footer>
   </div>
   <script src="main.js"></script>

@@ -10,8 +10,8 @@ body {
 }
 
 .invitacion {
-  max-width: 480px;
-  width: 70%;
+  max-width: 520px;
+  width: 90%;
   height: 80vh;
   background: rgba(255, 255, 255, 0.3);
   padding: 2rem;
@@ -34,9 +34,15 @@ body {
 
 .invitacion h2 {
   font-family: 'Great Vibes', cursive;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: #8B5E3C;
   margin-bottom: 1rem;
+}
+
+.invitacion p {
+  font-family: 'Montserrat';
+  font-size: 1.5rem;
+  margin-bottom: 1rems;
 }
 
 @media (max-width: 480px) {
@@ -47,7 +53,7 @@ body {
 
 .boton-direccion {
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
   padding: 0.75rem 1.5rem;
   background-color: #8B5E3C;
   color: white;
@@ -63,6 +69,67 @@ body {
   background-color: #704630;
 }
 
-.mapa {
+.cuenta-regresiva {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cuenta-regresiva h2 {
+  font-family: 'Montserrat';
+  font-size: 1.8rem;
+  color: #8B5E3C;
+  margin-bottom: 1rem;
+}
+
+.contador-grid {
+  display: flex;
   justify-content: center;
+  gap: 1rem;
+}
+
+.tiempo {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(139, 94, 60, 0.4);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tiempo span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #704630;
+}
+
+.tiempo small {
+  font-size: 0.8rem;
+  color: #8B5E3C;
+  margin-top: 0.3rem;
+}
+
+.mapa {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+.weatherwidget-io {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
