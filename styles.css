@@ -1,0 +1,214 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Contenedor general */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #6c5ce7;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+.navbar a {
+    color: #fff;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('fondo-hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.hero .btn {
+    background-color: #fd79a8;
+    color: #fff;
+    padding: 12px 25px;
+    margin-top: 25px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #e84393;
+}
+
+/* Plantillas Section */
+.plantillas {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.plantillas .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+}
+
+.card .btn {
+    background-color: #6c5ce7;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+    background-color: #5a4cd4;
+}
+
+/* Contacto Section */
+.contacto {
+    padding: 60px 0;
+    background-color: #ffeaa7;
+    text-align: center;
+}
+
+.contacto .btn {
+    background-color: #6c5ce7;
+    color: #fff;
+    padding: 12px 25px;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contacto .btn:hover {
+    background-color: #5a4cd4;
+}
+
+/* Footer */
+footer {
+    background-color: #2d3436;
+    color: #b2bec3;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* ==================== */
+/* Media Queries        */
+/* ==================== */
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .plantillas .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h2 {
+        font-size: 1.7rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero .btn, .card .btn, .contacto .btn {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+}

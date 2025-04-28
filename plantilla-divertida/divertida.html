@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitación Capibara</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <div class="invitacion">
+
+    <header class="encabezado">
+      <h2>¡Fiesta Capibara!</h2>
+    </header>
+
+    <main class="contenido">
+
+      <section class="descripcion">
+        <p><i>Ven a pasar un día relajante al estilo capibara.</i></p>
+        <h2><strong>Picnic Capibara</strong></h2>
+        <div>
+          <img src="img/capibara-fiesta.png" alt="Capibara feliz" width="60%" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); margin: 1rem;">
+        </div>
+        <p><strong>Fecha:</strong> <i>7 de julio de 2025</i></p>
+        <p><strong>Lugar:</strong> <i>Parque Natural Río Tranquilo</i></p>
+      </section>
+
+      <section class="ubicacion">
+        <h2>Ubicación</h2>
+        <div class="mapa">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14479.25825133374!2d-99.55622265!3d24.87018225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x867c938a40b1d9a5%3A0x83ae17d177babd77!2sQuinta%20La!5e0!3m2!1ses-419!2smx!4v1745818136318!5m2!1ses-419!2smx" 
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <a href="https://maps.app.goo.gl/zGPJwvDejFfPyv7n9" target="_blank" class="boton-direccion">
+          ¿Cómo llegar?
+        </a>
+      </section>
+
+      <section class="cuenta-regresiva">
+        <h2>Cuenta regresiva</h2>
+        <div id="contador" class="contador-grid">
+          <div class="tiempo">
+            <span id="dias">00</span>
+            <small>Días</small>
+          </div>
+          <div class="tiempo">
+            <span id="horas">00</span>
+            <small>Horas</small>
+          </div>
+          <div class="tiempo">
+            <span id="minutos">00</span>
+            <small>Minutos</small>
+          </div>
+          <div class="tiempo">
+            <span id="segundos">00</span>
+            <small>Segundos</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="clima">
+        <h2>Clima en el parque</h2>
+        <a class="weatherwidget-io" href="https://forecast7.com/es/" data-label_1="PARQUE" data-label_2="CLIMA" data-days="3" data-theme="pure">PARQUE CLIMA</a>
+      </section>
+
+    </main>
+
+    <footer class="pie">
+      <p>Confirmaciones al <strong>123-456-7890</strong></p>
+    </footer>
+
+  </div>
+
+  <!-- Scripts al final del body -->
+  <script>
+    const fechaEvento = new Date('2025-07-07T00:00:00').getTime();
+
+    const diasEl = document.getElementById('dias');
+    const horasEl = document.getElementById('horas');
+    const minutosEl = document.getElementById('minutos');
+    const segundosEl = document.getElementById('segundos');
+
+    const actualizarContador = () => {
+      const ahora = new Date().getTime();
+      const diferencia = fechaEvento - ahora;
+
+      if (diferencia <= 0) {
+        document.getElementById('contador').innerHTML = "¡Hoy es el gran día!";
+        clearInterval(intervalo);
+        return;
+      }
+
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+      diasEl.innerText = String(dias).padStart(2, '0');
+      horasEl.innerText = String(horas).padStart(2, '0');
+      minutosEl.innerText = String(minutos).padStart(2, '0');
+      segundosEl.innerText = String(segundos).padStart(2, '0');
+    };
+
+    const intervalo = setInterval(actualizarContador, 1000);
+    actualizarContador();
+  </script>
+
+  <script>
+    !function(d,s,id){
+      var js,fjs=d.getElementsByTagName(s)[0];
+      if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;
+        js.src='https://weatherwidget.io/js/widget.min.js';
+        fjs.parentNode.insertBefore(js,fjs);
+      }
+    }(document,'script','weatherwidget-io-js');
+  </script>
+<script src="main.js"></script>
+</body>
+</html>
