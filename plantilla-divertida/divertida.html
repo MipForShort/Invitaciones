@@ -75,10 +75,22 @@
     <footer class="pie">
       <p>Confirmaciones al</p>
       <p><strong>123-456-7890</strong></p>
-      <p>O reserva lugar en el botón de abajo</p>
-      <a href="https://docs.google.com/forms/d/e/TUFORMID/viewform" target="_blank" class="boton-capibara">
-        Confirmar Asistencia
-      </a>
+      <p>O</p>
+      
+      <!-- BOTÓN PARA ABRIR EL MODAL -->
+      <button id="abrirModal" class="boton-confirmar">Confirmar asistencia</button>
+    
+      <!-- MODAL -->
+      <div id="modalConfirmacion" class="modal" style="display:none;">
+        <div class="modal-contenido">
+          <h2>¿Cómo deseas confirmar tu asistencia?</h2>
+          <div class="opciones">
+            <a href="URL_DE_TU_GOOGLE_FORMS" target="_blank" class="opcion boton-forms">Google Forms</a>
+            <a href="https://wa.me/TUNUMERO?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda." target="_blank" class="opcion boton-whatsapp">WhatsApp</a>
+          </div>
+          <button id="cerrarModal" class="boton-cerrar">Cancelar</button>
+        </div>
+      </div>
     </footer>
 
   </div>
