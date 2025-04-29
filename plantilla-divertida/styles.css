@@ -87,34 +87,72 @@ body {
 .contador-grid {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
+  margin-top: 1rem;
+  flex-wrap: nowrap; /* Seguimos sin permitir que bajen */
 }
 
 .tiempo {
-  background: #c8e6c9;
-  border: 2px solid #81c784;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(139, 94, 60, 0.4);
   border-radius: 12px;
   padding: 1rem;
-  width: 80px;
-  height: 80px;
+  height: 90px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+  flex: 1 1 0; /* <-- ¡Cada tiempo se adapta al espacio disponible! */
+  min-width: 60px; /* Un mínimo para que no se hagan chiquitititos */
 }
 
 .tiempo span {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #388e3c;
+  color: #704630;
 }
 
 .tiempo small {
-  font-size: 0.8rem;
-  color: #2e7d32;
+  font-size: 0.9rem;
+  color: #8B5E3C;
+  margin-top: 0.3rem;
 }
+
+/* Responsivo: reducimos tamaños para pantallas pequeñas */
+@media (max-width: 768px) {
+  .tiempo {
+    padding: 0.8rem;
+    height: 80px;
+  }
+
+  .tiempo span {
+    font-size: 1.6rem;
+  }
+
+  .tiempo small {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tiempo {
+    padding: 0.6rem;
+    height: 70px;
+  }
+
+  .tiempo span {
+    font-size: 1.4rem;
+  }
+
+  .tiempo small {
+    font-size: 0.7rem;
+  }
+}
+
 
 .mapa {
   width: 100%;
