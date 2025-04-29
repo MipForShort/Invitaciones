@@ -116,6 +116,8 @@ header h1 {
 }
 
 .card .btn {
+    width: 100%;
+    height: auto;
     background-color: #6c5ce7;
     padding: 10px 20px;
     text-decoration: none;
@@ -125,10 +127,12 @@ header h1 {
     font-weight: bold;
     margin-top: 10px;
     transition: background-color 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .card .btn:hover {
     background-color: #5a4cd4;
+    transform: scale(1.05);
 }
 
 /* Contacto Section */

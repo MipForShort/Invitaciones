@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,15 +13,15 @@ body {
   max-width: 520px;
   width: 90%;
   height: 80vh;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4);
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   text-align: center;
   overflow-y: auto;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   opacity: 0;
   transform: scale(0.95);
   transition: all 0.5s ease;
@@ -33,16 +33,16 @@ body {
 }
 
 .invitacion h2 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
+  font-family: 'Fredoka', cursive;
+  font-size: 2.5rem;
   color: #5d4037;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .invitacion p {
-  font-family: 'Tinos';
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.8rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   color: #4e342e;
 }
 
@@ -63,9 +63,9 @@ body {
   background-color: #81c784;
   color: #fff;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 50px; /* Más burbuja, más capibara */
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: background 0.3s;
 }
 
@@ -78,10 +78,10 @@ body {
   margin-bottom: 2rem;
 }
 
-.cuenta-regresiva h2 {
-  font-family: 'Montserrat';
-  font-size: 1.6rem;
-  color: #5d4037;
+.cuenta-regresiva h2, .ubicacion h2, .clima h2 {
+  font-family: 'Fredoka', cursive;
+  font-size: 2rem;
+  color: #6d4c41;
 }
 
 .contador-grid {
@@ -96,8 +96,8 @@ body {
 .tiempo {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(5px);
-  border: 2px solid rgba(139, 94, 60, 0.4);
-  border-radius: 12px;
+  border: 2px solid rgba(139, 94, 60, 0.3);
+  border-radius: 20px;
   padding: 1rem;
   height: 90px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -106,20 +106,20 @@ body {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  flex: 1 1 0; /* <-- ¡Cada tiempo se adapta al espacio disponible! */
-  min-width: 60px; /* Un mínimo para que no se hagan chiquitititos */
+  flex: 1 1 0;
+  min-width: 60px;
 }
 
 .tiempo span {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
-  color: #704630;
+  color: #5e4332;
 }
 
 .tiempo small {
-  font-size: 0.9rem;
-  color: #8B5E3C;
-  margin-top: 0.3rem;
+  font-size: 1rem;
+  color: #7b5e57;
+  margin-top: 0.2rem;
 }
 
 /* Responsivo: reducimos tamaños para pantallas pequeñas */
