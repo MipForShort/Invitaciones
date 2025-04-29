@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #fad0c4 100%);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Fondo en movimiento para hacerlo más dinámico */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.invitacion {
+  max-width: 520px;
+  width: 90%;
+  min-height: 80vh;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  overflow-y: auto;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.5s ease;
+}
+
+.invitacion.animada {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Títulos H2 con estilo de circo y arcoíris */
+.invitacion h2 {
+  font-family: 'Luckiest Guy', cursive, sans-serif;
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: arcoiris 5s ease infinite;
+  margin-bottom: 1rem;
+}
+
+/* Animación de colores */
+@keyframes arcoiris {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.invitacion p {
+  font-family: 'Tinos', serif;
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: #4e342e;
+}
+
+/* Imagen centrada con sombra pegada */
+.descripcion img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0; /* Quitamos cualquier borde redondeado */
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5)); /* ¡Sombra que sigue la forma de la imagen! */
+}
+.boton-direccion {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(45deg, #ff4081, #ffeb3b, #00e5ff);
+  background-size: 200%;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-position 0.5s;
+}
+
+.boton-direccion:hover {
+  background-position: right center;
+}
+
+.cuenta-regresiva {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cuenta-regresiva h2 {
+  font-size: 2rem;
+}
+
+.contador-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tiempo {
+  background: #ffcc80;
+  border: 3px solid #ffa726;
+  border-radius: 16px;
+  padding: 1rem;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tiempo span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+.tiempo small {
+  font-size: 0.8rem;
+  color: #e65100;
+}
+
+.mapa {
+  width: 100%;
+  height: 300px;
+  margin-top: 1rem;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+.weatherwidget-io {
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+#startButtonContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  text-align: center;
+}
+
+#startButton {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, #ff4081, #7c4dff, #18ffff);
+  background-size: 200%;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: background-position 0.5s;
+}
+
+#startButton:hover {
+  background-position: right center;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 600px) {
+  .invitacion {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .contador-grid {
+    gap: 0.5rem;
+  }
+
+  .tiempo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .tiempo span {
+    font-size: 1.5rem;
+  }
+}
