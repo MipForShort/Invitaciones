@@ -175,3 +175,23 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
 }
+
+.boton-capibara {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 18px;
+  color: #4b3621;
+  background: linear-gradient(135deg, #e0c097, #f5e0b7);
+  border: none;
+  border-radius: 40px;
+  text-decoration: none;
+  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(160, 120, 60, 0.3);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.boton-capibara:hover {
+  background: linear-gradient(135deg, #f5e0b7, #e0c097);
+  transform: scale(1.05);
+}

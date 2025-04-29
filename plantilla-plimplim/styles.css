@@ -242,3 +242,24 @@ body {
     font-size: 1.5rem;
   }
 }
+
+.boton-plimplim {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 18px;
+  color: white;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5, #48c6ef, #6fef97, #f9f871);
+  background-size: 300% 300%;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Baloo 2', cursive;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: background-position 0.5s, transform 0.2s;
+}
+
+.boton-plimplim:hover {
+  background-position: right center;
+  transform: scale(1.05);
+}

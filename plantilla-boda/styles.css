@@ -177,3 +177,23 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
 }
+
+.boton-asistencia-dorado {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 18px;
+  color: #fff8e1;
+  background: linear-gradient(135deg, #b58e31, #f1c45c);
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 20px rgba(181, 142, 49, 0.4);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.boton-asistencia-dorado:hover {
+  background: linear-gradient(135deg, #f1c45c, #b58e31);
+  transform: scale(1.05);
+}
