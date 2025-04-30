@@ -24,4 +24,25 @@ window.onload = () => {
   modal.style.left = '50%';
   modal.style.transform = 'translateX(-50%)';
   
+  function crearDestello() {
+    const destello = document.createElement('div');
+    destello.classList.add('destello');
+
+    const ancho = window.innerWidth;
+    const alto = window.innerHeight;
+
+    const x = Math.random() * ancho;
+    const y = Math.random() * alto;
+
+    destello.style.left = `${x}px`;
+    destello.style.top = `${y}px`;
+
+    document.body.appendChild(destello);
+
+    setTimeout(() => {
+      destello.remove();
+    }, 2000); // Duración de la animación
+  }
+
+  setInterval(crearDestello, 400); // Cada 0.8 segundos se crea uno nuevo
 };

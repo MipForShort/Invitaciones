@@ -10,7 +10,10 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <div class="invitacion">
+  <div id="startButtonContainer">
+    <button id="startButton" area-label="Entrar a la fiesta">🎉¡Entrar a la fiesta!🎉</button>
+  </div>
+  <div class="invitacion" id="invitacion">
 
     <header class="encabezado">
       <h2>¡Fiesta Capibara!</h2>
@@ -22,7 +25,7 @@
         <p><i>Ven a pasar un día relajante al estilo capibara.</i></p>
         <h2><strong>Picnic Capibara</strong></h2>
         <div>
-          <img src="img/capibara-fiesta.png" alt="Capibara feliz" width="60%">
+          <img src="assets/capibara-fiesta.png" alt="Capibara feliz" width="60%">
         </div>
         <p><strong>Fecha:</strong> <i>7 de julio de 2025</i></p>
         <p><strong>Lugar:</strong> <i>Parque Natural Río Tranquilo</i></p>
@@ -95,6 +98,10 @@
 
   </div>
 
+  <audio id="backgroundMusic" loop>
+    <source src="assets/musica.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
   <!-- Scripts al final del body -->
   <script>
     const fechaEvento = new Date('2025-07-07T00:00:00').getTime();

@@ -67,7 +67,7 @@ window.onload = () => {
     // Función para posicionar el modal más abajo
     function posicionarModal() {
       modal.style.position = 'absolute';
-      modal.style.top = `${window.scrollY + 1250}px`;
+      modal.style.top = `${window.scrollY + 1116}px`;
       modal.style.left = '50%';
       modal.style.transform = 'translateX(-50%)';
     }
