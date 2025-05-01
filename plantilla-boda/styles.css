@@ -20,7 +20,7 @@ body {
   background: linear-gradient(45deg, #ff4081, #ffeb3b, #00e5ff); /* Efecto arcoiris */
   background-size: 300%; /* Transición suave entre colores */
   color: white; /* Color del texto */
-  font-family: 'Luckiest Guy', cursive, sans-serif; /* Fuente llamativa */
+  font-family: 'Tinos', cursive, sans-serif; /* Fuente llamativa */
   font-size: 2rem; /* Texto grande para destacar */
   padding: 1rem 2rem; /* Espaciado interno amplio */
   border: none; /* Sin bordes */

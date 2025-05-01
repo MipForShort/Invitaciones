@@ -18,6 +18,44 @@ body {
   100% { background-position: 0% 50%; }
 }
 
+#startButton {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  font-family: 'Luckiest Guy', cursive, sans-serif;
+  background: linear-gradient(45deg, #ff4081, #7c4dff, #18ffff);
+  background-size: 200%;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: background-position 0.5s;
+}
+
+#startButton:hover {
+  background-position: right center;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 600px) {
+  .invitacion {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .contador-grid {
+    gap: 0.5rem;
+  }
+
+  .tiempo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .tiempo span {
+    font-size: 1.5rem;
+  }
+}
+
 .invitacion {
   max-width: 520px;
   width: 90%;
@@ -204,43 +242,6 @@ body {
   transform: translate(-50%, -50%);
   z-index: 9999;
   text-align: center;
-}
-
-#startButton {
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
-  background: linear-gradient(45deg, #ff4081, #7c4dff, #18ffff);
-  background-size: 200%;
-  border: none;
-  border-radius: 12px;
-  color: white;
-  cursor: pointer;
-  transition: background-position 0.5s;
-}
-
-#startButton:hover {
-  background-position: right center;
-}
-
-/* Responsivo para móviles */
-@media (max-width: 600px) {
-  .invitacion {
-    width: 95%;
-    padding: 1.5rem;
-  }
-
-  .contador-grid {
-    gap: 0.5rem;
-  }
-
-  .tiempo {
-    width: 60px;
-    height: 60px;
-  }
-
-  .tiempo span {
-    font-size: 1.5rem;
-  }
 }
 
 .boton-confirmar {
