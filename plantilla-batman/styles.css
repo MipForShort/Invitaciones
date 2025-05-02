@@ -1,0 +1,326 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif; /* Fuente principal para texto */
+  display: flex; /* Centrado de contenido */
+  justify-content: center; /* Alineación horizontal */
+  align-items: center; /* Alineación vertical */
+  height: 100vh; /* Toda la altura de la pantalla */
+  background: linear-gradient(135deg, #000000, #444444); /* Gradiente gris */
+}
+
+#startButtonContainer {
+  display: flex; /* Centrado del botón */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la pantalla */
+}
+
+#startButton {
+  background: linear-gradient(45deg, #0d0d0d, #757575, #828282); /* Efecto arcoiris */
+  background-size: 300%; /* Transición suave entre colores */
+  color: white; /* Color del texto */
+  font-family: 'Bangers', sans-serif; /* Fuente llamativa */
+  font-size: 2rem; /* Texto grande para destacar */
+  padding: 1rem 2rem; /* Espaciado interno amplio */
+  border: none; /* Sin bordes */
+  border-radius: 12px; /* Esquinas redondeadas */
+  cursor: pointer; /* Indicador de clic */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Sombra para dar profundidad */
+  transition: all 0.4s ease; /* Animación suave */
+  animation: arcoiris 5s ease infinite; /* Movimiento continuo del gradiente */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra en el texto */
+}
+
+#startButton:hover {
+  background-position: right center; /* Movimiento del gradiente al pasar el mouse */
+  transform: scale(1.05); /* Ligero aumento al pasar el mouse */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35); /* Sombra más pronunciada */
+}
+
+.invitacion {
+  max-width: 520px; /* Tamaño máximo del cuadro */
+  width: 90%; /* Ajuste dinámico */
+  height: 80vh; /* Altura proporcional */
+  background: linear-gradient(135deg, #d7d2c9, #222222); /* Fondo gris palido a gris oscuro */
+  padding: 2rem; /* Espaciado interno */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6); /* Sombra para destacar */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  -webkit-backdrop-filter: blur(10px); /* Compatibilidad con WebKit */
+  text-align: center; /* Centrado del texto */
+  overflow-y: auto; /* Scroll si el contenido excede el cuadro */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+  opacity: 0; /* Oculto inicialmente */
+  transform: scale(0.95); /* Tamaño reducido antes de la animación */
+  transition: all 0.5s ease; /* Animación de entrada */
+}
+
+#invitacion {
+  display: none; /* Mantener el cuadro oculto hasta que se active */
+}
+
+.invitacion.animada {
+  opacity: 1; /* Mostrar el cuadro */
+  transform: scale(1); /* Tamaño normal */
+}
+
+.invitacion h2 {
+  font-family: 'Bangers', sans-serif; /* Fuente decorativa */
+  font-size: 3.5rem; /* Tamaño destacado */
+  text-align: center; /* Centrado del título */
+  background: linear-gradient(90deg, #ededed, #ded6d6, #ffffff); /* Efecto degradado */
+  background-size: 200%; /* Ajuste para animación */
+  background-clip: text; /* Solo el texto toma el fondo */
+  -webkit-background-clip: text; /* Compatibilidad con WebKit */
+  -webkit-text-fill-color: transparent; /* Hacer el fondo visible */
+  animation: animate-gradient 2.5s linear infinite; /* Movimiento continuo del degradado */
+  margin-top: 1.5rem; /* Espaciado superior */
+}
+
+.invitacion p {
+  font-family: 'Quicksand'; /* Fuente clásica para el texto */
+  font-size: 1.8rem; /* Tamaño grande para buena lectura */
+  margin-top: 2rem; /* Separación respecto al contenido superior */
+  color: black;
+}
+
+@media (max-width: 480px) {
+  .invitacion {
+    padding: 1rem; /* Menos relleno en pantallas pequeñas */
+  }
+}
+
+.descripcion img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0; /* Quitamos cualquier borde redondeado */
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5)); /* ¡Sombra que sigue la forma de la imagen! */
+}
+
+.boton-direccion {
+  display: inline-block; /* Se comporta como botón, pero respeta el flujo */
+  margin-top: 2.5rem; /* Espacio arriba del botón */
+  padding: 0.75rem 1.5rem; /* Buen tamaño para el área clickeable */
+  background-color: #ded6d6; /* Marrón café elegante */
+  color: black; /* Contraste con el fondo */
+  text-decoration: none; /* Quitamos el subrayado típico de enlaces */
+  border-radius: 8px; /* Esquinas redondeadas */
+  font-weight: bold; /* Texto en negrita */
+  font-family: 'Segoe UI', sans-serif; /* Fuente legible */
+  font-size: 1.1rem; /* Tamaño ideal para botones */
+  transition: background 0.3s; /* Transición suave al pasar el mouse */
+}
+
+.boton-direccion:hover {
+  background-color: #704630; /* Oscurece al pasar el mouse */
+}
+
+.cuenta-regresiva {
+  margin-top: 2rem; /* Separación superior */
+  margin-bottom: 2rem; /* Separación inferior */
+}
+
+.cuenta-regresiva h2 {
+  font-family: 'Montserrat'; /* Fuente moderna y clara */
+  font-size: 1.8rem; /* Tamaño visible para el título */
+  color: #8B5E3C; /* Marrón que va con el estilo general */
+  margin-bottom: 1rem; /* Espacio con respecto al contador */
+}
+
+.contador-grid {
+  display: flex; /* Alineamos los bloques horizontalmente */
+  justify-content: center; /* Centramos horizontalmente */
+  align-items: center; /* Centramos verticalmente */
+  gap: 1rem; /* Espacio entre cada bloque de tiempo */
+  margin-top: 1rem; /* Separación del título */
+  flex-wrap: nowrap; /* Seguimos sin permitir que bajen */
+}
+
+.tiempo {
+  background: rgba(255, 255, 255, 0.6); /* Fondo blanco semi-transparente */
+  backdrop-filter: blur(5px); /* Desenfoque del fondo */
+  border: 2px solid rgba(139, 94, 60, 0.4); /* Borde con color marrón tenue */
+  border-radius: 12px; /* Bordes redondeados */
+  padding: 1rem; /* Espaciado interno */
+  height: 90px; /* Altura definida para mantener proporción */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  display: flex; /* Flex para alinear contenido interno */
+  flex-direction: column; /* Apilamos los elementos verticalmente */
+  align-items: center; /* Centramos horizontalmente */
+  justify-content: center; /* Centramos verticalmente */
+  transition: all 0.3s ease; /* Transiciones suaves */
+  flex: 1 1 0; /* <-- ¡Cada tiempo se adapta al espacio disponible! */
+  min-width: 60px; /* Un mínimo para que no se hagan chiquitititos */
+}
+
+.tiempo span {
+  font-size: 2rem; /* Tamaño grande para destacar el número */
+  font-weight: bold; /* Negrita para que resalte bien */
+  color: #704630; /* Marrón intenso, coherente con la paleta */
+}
+
+.tiempo small {
+  font-size: 0.9rem; /* Texto más pequeño para la etiqueta (días, horas...) */
+  color: #8B5E3C; /* Marrón más claro que el número, buena jerarquía visual */
+  margin-top: 0.3rem; /* Un pequeño espacio entre número y texto */
+}
+
+/* Responsivo: reducimos tamaños para pantallas pequeñas */
+@media (max-width: 768px) {
+  .tiempo {
+    padding: 0.8rem; /* Menos espacio interno */
+    height: 80px; /* Más bajo en pantallas medianas */
+  }
+
+  .tiempo span {
+    font-size: 1.6rem; /* Tamaño del número reducido */
+  }
+
+  .tiempo small {
+    font-size: 0.8rem; /* Texto más pequeño también */
+  }
+}
+
+@media (max-width: 480px) {
+  .tiempo {
+    padding: 0.6rem; /* Aún menos relleno en móviles */
+    height: 70px; /* Compactamos aún más */
+  }
+
+  .tiempo span {
+    font-size: 1.4rem; /* Número más pequeño en celular */
+  }
+
+  .tiempo small {
+    font-size: 0.7rem; /* Tamaño mínimo legible del texto */
+  }
+}
+
+.mapa {
+  width: 100%; /* Que se adapte al contenedor */
+  height: 300px; /* Altura fija para buena visibilidad */
+  overflow: hidden; /* Evita que el iframe se desborde */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Sombra envolvente elegante */
+  border-radius: 12px; /* Esquinas redondeadas */
+  margin-bottom: 1.5rem; /* Espacio con el contenido siguiente */
+}
+
+.mapa iframe {
+  width: 100%; /* El mapa llena todo el contenedor */
+  height: 100%; /* Altura también completa */
+  border: 0; /* Sin bordes del iframe */
+  border-radius: 12px; /* Coincide con el contenedor padre */
+}
+
+.weatherwidget-io {
+  margin-top: 2rem; /* Separación superior */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra más ligera que la del mapa */
+  border-radius: 12px; /* Consistencia visual con el resto */
+}
+
+/* Botón principal dorado */
+.boton-confirmar {
+  padding: 14px 32px; /* Botón grande y cómodo al tacto */
+  font-size: 20px; /* Letra legible y llamativa */
+  color: #333; /* Texto blanco para contraste fuerte */
+  background: linear-gradient(90deg, #ededed, #ded6d6, #ffffff 100%); /* Gradiente dorado elegante */
+  border: none; /* Sin borde visible */
+  border-radius: 40px; /* Forma de píldora redondeada */
+  cursor: pointer; /* Manita al pasar el mouse */
+  font-family: 'Poppins', sans-serif; /* Fuente moderna y clara */
+  letter-spacing: 1px; /* Espacio entre letras para elegancia */
+  transition: background 0.3s, transform 0.2s; /* Animaciones suaves al interactuar */
+}
+
+.boton-confirmar:hover {
+  background: linear-gradient(90deg, #0d0d0d 0%, #828282 100%); /* Reverso del gradiente al pasar el mouse */
+  transform: scale(1.05); /* Efecto de zoom ligero */
+  color: whitesmoke;
+}
+
+.modal {
+  position: fixed; /* Siempre visible encima del contenido */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrado vertical y horizontal */
+  z-index: 1000; /* Muy por encima del resto del contenido */
+}
+
+.modal-contenido {
+  background: gray; /* Fondo claro para el contenido */
+  padding: 2rem; /* Espacio interior cómodo */
+  border-radius: 12px; /* Bordes suaves y modernos */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Sombra flotante */
+  max-width: 400px; /* Límite de ancho para buena lectura */
+  width: 90%; /* Se adapta a la pantalla */
+  text-align: center; /* Todo centrado en el modal */
+  position: relative; /* Por si se quiere posicionar algo dentro */
+}
+
+.opciones {
+  display: flex;
+  flex-direction: column; /* Opciones apiladas verticalmente */
+  gap: 1rem; /* Espacio entre cada una */
+  margin: 1.5rem 0; /* Separación vertical del bloque */
+}
+
+.opcion {
+  display: inline-block; /* Se comporta como botón, pero flexible */
+  padding: 0.75rem 1.5rem; /* Tamaño del botón visualmente equilibrado */
+  text-decoration: none; /* Sin subrayado */
+  border-radius: 8px; /* Bordes redondeados estándar */
+  font-weight: bold; /* Que se note el texto */
+  font-size: 1.1rem; /* Tamaño adecuado para leer sin esfuerzo */
+}
+
+/* Estilos personalizados según el tipo de opción */
+.boton-forms {
+  background-color: #4CAF50; /* Verde formulario */
+  color: white;
+}
+
+.boton-whatsapp {
+  background-color: #25D366; /* Verde WhatsApp */
+  color: white;
+}
+
+.boton-cerrar {
+  background-color: #ccc; /* Gris neutro */
+  color: #333; /* Gris más oscuro para contraste */
+  padding: 0.5rem 1rem; /* Botón más pequeño */
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer; /* Cursor de acción */
+  transition: background 0.3s; /* Cambio suave al pasar el mouse */
+}
+
+.boton-cerrar:hover {
+  background-color: #bbb; /* Un gris más oscuro al hacer hover */
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 480px) {
+  .modal-contenido {
+    padding: 1.5rem 1rem; /* Menos espacio interno */
+    width: 90%;
+    max-width: 90%; /* Se adapta mejor a pantallas pequeñas */
+  }
+
+  .opciones {
+    flex-direction: column; /* Seguimos verticales */
+  }
+
+  .opcion {
+    font-size: 1rem; /* Reducimos tamaño de letra */
+    padding: 0.5rem 1rem; /* Botones más compactos */
+  }
+}
