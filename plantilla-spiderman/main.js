@@ -73,7 +73,7 @@ window.onload = () => { // Al cargar pagina
   });
 
   modal.style.position = 'absolute';
-  modal.style.top = `${window.scrollY + 1300}px`; // 100px debajo del top del scroll
+  modal.style.top = `${window.scrollY + 1400}px`; // 100px debajo del top del scroll
   modal.style.left = '50%';
   modal.style.transform = 'translateX(-50%)';
 };

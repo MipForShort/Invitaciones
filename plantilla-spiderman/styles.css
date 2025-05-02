@@ -6,7 +6,7 @@ body {
   justify-content: center; /* Alineación horizontal */
   align-items: center; /* Alineación vertical */
   height: 100vh; /* Toda la altura de la pantalla */
-  background: linear-gradient(135deg, #000000, #444444); /* Gradiente gris */
+  background: linear-gradient(135deg, #ff1e00, #0a107a); /* Gradiente gris */
 }
 
 #startButtonContainer {
@@ -17,7 +17,7 @@ body {
 }
 
 #startButton {
-  background: linear-gradient(45deg, #0d0d0d, #757575, #828282); /* Efecto arcoiris */
+  background: linear-gradient(45deg, #ad0f00, #f7062b, #183dea); /* Efecto arcoiris */
   background-size: 300%; /* Transición suave entre colores */
   color: white; /* Color del texto */
   font-family: 'Bangers', sans-serif; /* Fuente llamativa */
@@ -42,7 +42,7 @@ body {
   max-width: 520px; /* Tamaño máximo del cuadro */
   width: 90%; /* Ajuste dinámico */
   height: 80vh; /* Altura proporcional */
-  background: linear-gradient(135deg, #d7d2c9, #222222); /* Fondo gris palido a gris oscuro */
+  background: linear-gradient(135deg, #ededed, #ded6d6, #ffffff); /* Fondo gris palido a gris oscuro */
   padding: 2rem; /* Espaciado interno */
   border-radius: 12px; /* Bordes redondeados */
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6); /* Sombra para destacar */
@@ -69,7 +69,7 @@ body {
   font-family: 'Bangers', sans-serif; /* Fuente decorativa */
   font-size: 3.5rem; /* Tamaño destacado */
   text-align: center; /* Centrado del título */
-  background: linear-gradient(90deg, #ededed, #ded6d6, #ffffff); /* Efecto degradado */
+  background: linear-gradient(90deg, #cc0e04, #8bad34); /* Efecto degradado */
   background-size: 200%; /* Ajuste para animación */
   background-clip: text; /* Solo el texto toma el fondo */
   -webkit-background-clip: text; /* Compatibilidad con WebKit */
@@ -104,20 +104,18 @@ body {
   display: inline-block; /* Se comporta como botón, pero respeta el flujo */
   margin-top: 2.5rem; /* Espacio arriba del botón */
   padding: 0.75rem 1.5rem; /* Buen tamaño para el área clickeable */
-  background: linear-gradient(90deg, #ededed, #ded6d6, #ffffff 100%); /* Gradiente plateado */
-  color: black; /* Contraste con el fondo */
+  background: linear-gradient(to right, #cc0e04, #8bad34); /* Marrón café elegante */
+  color: white; /* Contraste con el fondo */
   text-decoration: none; /* Quitamos el subrayado típico de enlaces */
   border-radius: 8px; /* Esquinas redondeadas */
   font-weight: bold; /* Texto en negrita */
   font-family: 'Segoe UI', sans-serif; /* Fuente legible */
   font-size: 1.1rem; /* Tamaño ideal para botones */
-  transition: background 0.3s, transform 0.2s; /* Animaciones suaves al interactuar */
+  transition: background 0.3s; /* Transición suave al pasar el mouse */
 }
 
 .boton-direccion:hover {
-  background: linear-gradient(90deg, #0d0d0d 0%, #828282 100%); /* Oscurece al pasar el mouse */
-  transform: scale(1.05);
-  color: white;
+  background: #cc0e04; /* Oscurece al pasar el mouse */
 }
 
 .cuenta-regresiva {
@@ -227,8 +225,8 @@ body {
 .boton-confirmar {
   padding: 14px 32px; /* Botón grande y cómodo al tacto */
   font-size: 20px; /* Letra legible y llamativa */
-  color: #333; /* Texto blanco para contraste fuerte */
-  background: linear-gradient(90deg, #ededed, #ded6d6, #ffffff 100%); /* Gradiente plateado */
+  color: white; /* Texto blanco para contraste fuerte */
+  background: linear-gradient(90deg, #ff1e00, #0a107a 100%); /* Gradiente */
   border: none; /* Sin borde visible */
   border-radius: 40px; /* Forma de píldora redondeada */
   cursor: pointer; /* Manita al pasar el mouse */
