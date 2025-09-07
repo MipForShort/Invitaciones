@@ -74,7 +74,7 @@ window.onload = () => { // Al cargar pagina
 
   // Apartado para crear destellos en la pantalla
   modal.style.position = 'absolute';
-  modal.style.top = `${window.scrollY + 1250}px`; // 100px debajo del top del scroll
+  modal.style.top = `${window.scrollY + 1650}px`; // 100px debajo del top del scroll
   modal.style.left = '50%';
   modal.style.transform = 'translateX(-50%)';
   
